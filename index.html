@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Order System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Restaurant Order System</h1>
+
+        <!-- Order Input Form -->
+        <div class="form-container">
+            <h2>Enter Order Details</h2>
+            <form action="process_order.php" method="POST">
+                <input type="text" name="order_id" placeholder="Order ID" required>
+                <input type="text" name="customer_name" placeholder="Customer Name" required>
+                <input type="text" name="item_name" placeholder="Item Name" required>
+                <input type="number" name="quantity" placeholder="Quantity" required>
+                <input type="number" name="total_price" placeholder="Total Price" required>
+                <button type="submit" class="submit-btn">Submit Order</button>
+            </form>
+        </div>
+
+        <!-- Retrieve Order by Order ID -->
+        <div class="retrieve-container">
+            <h2>Retrieve Order</h2>
+            <form action="retrieve_order.php" method="GET">
+                <input type="text" name="order_id" placeholder="Enter Order ID to Retrieve" required>
+                <button type="submit" class="retrieve-btn">Retrieve</button>
+            </form>
+        </div>
+
+        <!-- Order Information Display (will be populated by PHP) -->
+        <div class="order-details" id="orderDetails">
+            <!-- Data will be shown here after retrieving order -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
